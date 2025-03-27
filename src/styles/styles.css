@@ -1,3 +1,8 @@
+:root {
+    --color-primary: #61c739;
+}
+
+
 * {
     box-sizing: border-box;
     max-width: 100%;
@@ -35,7 +40,7 @@ h6 {
 }
 
 .app__header__content {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(6px);
     display: flex;
     width: 100vw;
     align-items: center;
@@ -69,7 +74,7 @@ h6 {
 
 
 .app__header__search {
-    background-color: #f3f3ee;
+    background-color: #f7f8e6;
     height: 150px;
     border-radius: 16px;
     box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.35);
@@ -78,10 +83,25 @@ h6 {
 .app__header__search-items {
     width: 600px;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
+    padding: 0px 20px;
+}
+
+.app__header__search-items input {
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    padding-left: 10px;
+}
+
+#searchImovel {
+    width: 300px !important;
 }
 
 .app__header__menu {
@@ -107,6 +127,23 @@ h6 {
     filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.65));
 }
 
+.app__header__menu__content__logo__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.app__header__menu__content__logo__link span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.65);
+}
+
+
 .app__header__menu__content__links {
     display: flex;
     justify-self: flex-end;
@@ -129,7 +166,7 @@ h6 {
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 
     padding: 12px;
 }
@@ -144,7 +181,22 @@ h6 {
 }
 
 .app__header__menu__content__login__button {
-    height: 40px;
+    height: 45px;
     padding: 8px;
-    width: 100px;
+    width: 120px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.app__header__menu__content__login__button.header__button__cadastro {
+    background-color: var(--color-primary);
+
+}
+
+.app__header__menu__content__login__button.header__button__entrar {
+    background-color: #f7f8e6;
 }
