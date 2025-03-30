@@ -1,0 +1,29 @@
+.app__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 3.2rem;
+}
+
+.app__content__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    max-height: 600px;
+    background-color: azure;
+
+}
+
+.card__content {
+    padding: 15px;
+}

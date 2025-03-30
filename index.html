@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="src/styles/header.css">
     <link rel="stylesheet" href="src/styles/categories.css">
+    <link rel="stylesheet" href="src/styles/cards-home.css">
+    <link rel="stylesheet" href="src/styles/footer.css">
 </head>
 
 <body>
@@ -71,7 +73,7 @@
 
         <section class="app__categories">
 
-            <h1>Categorias</h1>
+            <h1 class="section-title">Categorias</h1>
             <div class="app__categories__content">
                 <div class="app__categories__content__card">
                     <img src="assets/imagens/categoria-casa.webp" alt="Imagem da casa">
@@ -95,27 +97,57 @@
         </section>
 
         <section class="app__content">
+            <h1 class="section-title">Veja oque está disponível</h1>
             <div class="app__content__cards">
+
                 <div class="card">
                     <div class="card__image">
-                        <img src="assets/imagens/1.jpg" alt="Imagem da casa">
+                        <img src="assets/imagens/casa1.jpg" alt="Imagem da casa">
                     </div>
                     <div class="card__content">
-                        <h2>Casa</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                        <div class="title">
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                        </div>
+                        <div class="price">
+                            <h2>R$3000</h2>
+                            <div class="price-details">
+                                <p>Cond. R$500</p>
+                                <p>IPTU R$1000</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card__image">
-                        <img src="assets/imagens/2.jpg" alt="Imagem da casa">
+                        <img src="assets/imagens/casa2.jpg" alt="Imagem da casa">
                     </div>
                     <div class="card__content">
-                        <h2>Casa</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                        <div class="title">
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                        </div>
+
+                        <div class="price">
+                            <h2>R$3000</h2>
+                            <div class="price-details">
+                                <p>Cond. R$500</p>
+                                <p>IPTU R$1000</p>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
+
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>Projeto Bem Morar, sem fins monetários.<br>
+            Desenvolvido por Carlos Semione</p>
+    </footer>
 
 </body>
 
