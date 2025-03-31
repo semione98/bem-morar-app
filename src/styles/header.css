@@ -9,9 +9,10 @@
 }
 
 html {
-    background: #f7f8e6;
+    background: #fff;
     min-height: 100vh;
     font-size: 10px;
+    font-family: inherit !important;
 }
 
 body {
@@ -47,6 +48,7 @@ h6 {
     align-items: center;
     height: 450px;
     flex-direction: column;
+
 }
 
 .app__header__content__banner__search {
@@ -70,12 +72,13 @@ h6 {
 }
 
 .app__header__banner h1 {
-    font-size: 3rem;
+    font-size: 3.3rem;
+    color: rgb(37, 36, 36);
 }
 
 
 .app__header__search {
-    background-color: #f7f8e6;
+    background-color: #f7f8e6ea;
     height: 150px;
     border-radius: 16px;
     box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.35);
@@ -128,6 +131,7 @@ h6 {
     align-items: center;
     gap: 20px;
     max-height: 80px;
+    padding: 10px;
 
 }
 
@@ -192,14 +196,15 @@ h6 {
 
 .app__header__menu__content__login__button {
     height: 45px;
-    padding: 8px;
+    padding: 8px !important;
     width: 120px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem !important;
     border-radius: 8px;
     border: none;
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none !important;
 }
 
 .app__header__menu__content__login__button.header__button__cadastro {
