@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fastify/cors": "^11.0.1",
     "dotenv": "^16.4.7",
     "fastify": "^5.2.2",
     "postgres": "^3.4.5"
@@ -8,7 +9,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm --watch src/js/server.js"
