@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.2",
+    "postgres": "^3.4.5"
+  },
+  "name": "bem-morar-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm --watch src/js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semione98/bem-morar-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/semione98/bem-morar-app/issues"
+  },
+  "homepage": "https://github.com/semione98/bem-morar-app#readme"
+}
