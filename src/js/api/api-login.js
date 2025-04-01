@@ -12,7 +12,8 @@ const apiLogin = {
                 body: JSON.stringify(loginData)
             });
             if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
+                const responseError = await response.json();
+                throw new Error('Network response was not ok ' + responseError.error);
                 return
             }
             const data = await response.json();
@@ -23,7 +24,17 @@ const apiLogin = {
         }
 
 
-    }
+    },
+
+    async loginToken(token) {
+        try {
+            const response = await fetch(`${urlBase}/login/${token}`)
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Erro ao tentar logar:', error);
+        }
+    },
 
 }
 

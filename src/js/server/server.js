@@ -17,6 +17,7 @@ app.register(cors, {
 
 app.post('/cadastro', userController.cadastroUser);
 app.post('/login', userController.loginUser);
+app.get('/login/:token', userController.getUserById)
 
 
 app.listen({

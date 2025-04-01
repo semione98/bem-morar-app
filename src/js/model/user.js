@@ -12,6 +12,16 @@ const User = {
     async findUserByEmail(email) {
         const result = await sql`SELECT * FROM usuarios WHERE email = ${email}`;
         if (result.length === 0) {
+            console.log(result)
+            return null;
+        }
+        console.log(result)
+        return result[0];
+    },
+
+    async findUserById(id) {
+        const result = await sql`SELECT * FROM usuarios WHERE id = ${id}`;
+        if (result.length === 0) {
             return null;
         }
         return result[0];

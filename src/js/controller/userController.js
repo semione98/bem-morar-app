@@ -1,4 +1,3 @@
-import sql from '../server/db.js';
 import User from '../model/user.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
@@ -35,23 +34,40 @@ const userController = {
 
     async loginUser(request, reply) {
         try {
-            const { email, senha } = request.body;
+            const { email, password } = request.body;
 
             const user = await User.findUserByEmail(email);
             if (!user) {
                 return reply.status(401).send({ error: 'Usuário não encontrado.' });
             }
 
-            const comparaSenha = await bcrypt.compare(senha, user.password);
+            const comparaSenha = await bcrypt.compare(password, user.password);
             if (!comparaSenha) {
                 return reply.status(401).send({ error: 'Senha incorreta.' });
             }
 
             const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET);
-            return reply.status(200).send({ message: 'Login realizado com sucesso!', token });
+            return reply.status(200).send({ user: { id: user.id, name: user.name, email: user.email }, message: 'Login realizado com sucesso!', token });
         } catch (error) {
             console.error('Erro ao tentar fazer login:', error);
             return reply.status(500).send({ error: 'Erro ao tentar fazer login - userController.' });
+        }
+    },
+
+    async getUserById(request, reply) {
+        try {
+            const { token } = request.params;
+            const decodedToken = jwt.decode(token);
+            const id = decodedToken.id;
+            console.log(id)
+            const user = await User.findUserById(id);
+            if (!user) {
+                return reply.status(404).send({ error: 'Usuário não encontrado.' });
+            }
+            return reply.status(200).send(user);
+        } catch (error) {
+            console.error('Erro ao tentar encontrar usuário:', error);
+            return reply.status(500).send({ error: 'Erro ao tentar encontrar usuário - userController.' });
         }
     },
 
