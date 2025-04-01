@@ -12,7 +12,8 @@ const apiCadastro = {
                 body: JSON.stringify(cadastroData)
             });
             if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
+                const errorResponse = await response.json();
+                throw new Error('Network response was not ok ' + errorResponse.error);
             }
             const data = await response.json();
             console.log('Cadastro bem-sucedido:', data);
