@@ -1,4 +1,4 @@
-import api from "./api/api-login";
+import apiLogin from "./api/api-login.js";
 
 const formLogin = document.getElementById("formLogin");
 const email = document.getElementById("usrname");
@@ -20,7 +20,7 @@ formLogin.addEventListener("submit", async function (event) {
         password: passwordValue
     };
 
-    await api.loginPost(loginData)
+    await apiLogin.loginPost(loginData)
 
 
 

@@ -1,6 +1,7 @@
 import fastify from "fastify";
 import dotenv from "dotenv";
 import cors from "@fastify/cors";
+import userController from "../controller/userController.js";
 
 dotenv.config();
 
@@ -14,17 +15,8 @@ app.register(cors, {
     exposedHeaders: ['Content-Type', 'Authorization']
 })
 
-app.post('/cadastro', async (request, reply) => {
-    const { nome, email, senha, telefone } = request.body;
-
-    if (!nome || !email || !senha || !telefone) {
-        return reply.status(400).send({ error: 'Todos os campos são obrigatórios.' });
-    }
-
-    // lógica
-
-    return reply.status(201).send({ message: 'Cadastro realizado com sucesso!' });
-})
+app.post('/cadastro', userController.cadastroUser);
+app.post('/login', userController.loginUser);
 
 
 app.listen({

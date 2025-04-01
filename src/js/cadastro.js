@@ -1,3 +1,4 @@
+import apiCadastro from "./api/api-cadastro.js";
 const formCadastro = document.getElementById('formCadastro');
 const nome = document.getElementById('nome');
 const email = document.getElementById('email');
@@ -24,5 +25,5 @@ formCadastro.addEventListener('submit', async function (event) {
         telefone: telefoneValue
     };
 
-    await api.cadastroPost(cadastroData);
+    await apiCadastro.cadastroPost(cadastroData);
 });

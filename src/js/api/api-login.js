@@ -1,10 +1,10 @@
-const urlBase = 'http://localhost:3000/';
+const urlBase = 'http://localhost:3000';
 
-const api = {
+const apiLogin = {
 
     async loginPost(loginData) {
         try {
-            const response = await fetch('${urlBase}/login', {
+            const response = await fetch(`${urlBase}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -27,4 +27,4 @@ const api = {
 
 }
 
-export default api;
+export default apiLogin;

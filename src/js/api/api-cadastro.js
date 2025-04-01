@@ -1,6 +1,6 @@
-const urlBase = 'http://localhost:3000/';
+const urlBase = 'http://localhost:3000';
 
-const api = {
+const apiCadastro = {
 
     async cadastroPost(cadastroData) {
         try {
@@ -25,3 +25,5 @@ const api = {
 
 
 }
+
+export default apiCadastro;
