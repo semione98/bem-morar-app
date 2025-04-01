@@ -14,8 +14,17 @@ app.register(cors, {
     exposedHeaders: ['Content-Type', 'Authorization']
 })
 
+app.post('/cadastro', async (request, reply) => {
+    const { nome, email, senha, telefone } = request.body;
 
+    if (!nome || !email || !senha || !telefone) {
+        return reply.status(400).send({ error: 'Todos os campos são obrigatórios.' });
+    }
 
+    // lógica
+
+    return reply.status(201).send({ message: 'Cadastro realizado com sucesso!' });
+})
 
 
 app.listen({
