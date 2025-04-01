@@ -42,8 +42,8 @@ const userController = {
                 return reply.status(401).send({ error: 'Usuário não encontrado.' });
             }
 
-            const camparaSenha = await bcrypt.compare(senha, user.password);
-            if (!camparaSenha) {
+            const comparaSenha = await bcrypt.compare(senha, user.password);
+            if (!comparaSenha) {
                 return reply.status(401).send({ error: 'Senha incorreta.' });
             }
 
