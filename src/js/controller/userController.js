@@ -46,8 +46,8 @@ const userController = {
                 return reply.status(401).send({ error: 'Senha incorreta.' });
             }
 
-            const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET);
-            return reply.status(200).send({ user: { id: user.id, name: user.name, email: user.email }, message: 'Login realizado com sucesso!', token });
+            const token = jwt.sign({ id: user.id, email: user.email, name: user.name, phone: user.phone }, process.env.JWT_SECRET, { expiresIn: '10h' });
+            return reply.status(200).send({ user: { id: user.id, name: user.name, email: user.email, phone: user.phone }, message: 'Login realizado com sucesso!', token });
         } catch (error) {
             console.error('Erro ao tentar fazer login:', error);
             return reply.status(500).send({ error: 'Erro ao tentar fazer login - userController.' });
@@ -60,7 +60,7 @@ const userController = {
             console.log(token)
             const decodedToken = jwt.decode(token);
             const id = decodedToken.id;
-            console.log(id)
+            console.log(id + " getUserById - userController")
             const user = await User.findUserById(id);
             if (!user) {
                 return reply.status(404).send({ error: 'Usuário não encontrado.' });
