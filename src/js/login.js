@@ -41,7 +41,7 @@ export function updateUi(user) {
     const divBtnLogin = document.querySelector(".app__header__menu__content__login")
     divBtnLogin.innerHTML = `
         <p>Olá, ${user.name}</p>
-        <button id="btnLogout">Sair</button>
+        <button id="btnLogout" class="btn btn-default btn-lg">Sair</button>
     `
 
 }
