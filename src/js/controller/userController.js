@@ -56,7 +56,8 @@ const userController = {
 
     async getUserById(request, reply) {
         try {
-            const { token } = request.params;
+            const { token } = request.body;
+            console.log(token)
             const decodedToken = jwt.decode(token);
             const id = decodedToken.id;
             console.log(id)

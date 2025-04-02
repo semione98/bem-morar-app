@@ -342,6 +342,13 @@
             $("#myBtn").click(function () {
                 $("#myModal").modal();
             });
+
+            $('#formLogin').on('submit', function (e) {
+                e.preventDefault();
+                setTimeout(() => {
+                    $('#myModal').modal('hide');
+                }, 800);
+            })
         });
     </script>
 
@@ -351,6 +358,13 @@
             $("#btnCadastro").click(function () {
                 $("#modalCadastro").modal();
             });
+
+            $('#formCadastro').on('submit', function (e) {
+                e.preventDefault();
+                setTimeout(() => {
+                    $('#modalCadastro').modal('hide');
+                }, 800);
+            })
         });
     </script>
 
