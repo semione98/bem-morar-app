@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Morar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="stylesheet" href="/src/styles/categories.css">
+    <link rel="stylesheet" href="/src/styles/cards-home.css">
+    <link rel="stylesheet" href="/src/styles/footer.css">
+
+    <!-- links & styles modal login -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .modal-header,
+        h4,
+        .close {
+            background-color: #5cb85c;
+            color: white !important;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .modal-footer {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="app__header__anunciarImovel">
+
+        <div class="app__header__content__anunciarImovel">
+
+            <div class="app__header__menu">
+                <div class="app__header__menu__content">
+                    <a class="app__header__menu__content__logo__link" href="/index.html">
+                        <img src="/assets/imagens/logo-header-certo.webp" alt="">
+                        <span>Bem Morar</span>
+                    </a>
+                    <nav class="app__header__menu__content__links">
+                        <ul>
+                            <li>Alugar</li>
+                            <li>Comprar</li>
+                            <li>Lançamentos</li>
+                            <li>Descobrir</li>
+                            <li>Anunciar</li>
+                            <li>Financiamento</li>
+                            <li>Ajuda</li>
+                        </ul>
+                    </nav>
+
+                    <div class="app__header__menu__content__login">
+                        <button
+                            class="app__header__menu__content__login__button header__button__cadastro btn btn-default btn-lg"
+                            id="btnCadastro">Criar
+                            conta</button>
+                        <button
+                            class="app__header__menu__content__login__button header__button__entrar btn btn-default btn-lg"
+                            id="myBtn">Entrar</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <main class="app">
+
+
+
+    </main>
+
+
+    <footer>
+        <p>Projeto Bem Morar, sem fins monetários.<br>
+            Desenvolvido por Carlos Semione</p>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+
+    <script type="module" src="/src/js/api/api-cadastro.js"></script>
+    <script type="module" src="/src/js/api/api-login.js"></script>
+
+
+
+</body>
+
+</html>

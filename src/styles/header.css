@@ -29,6 +29,11 @@ h6 {
     font-family: 'Montserrat', cursive;
 }
 
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
 .app__header {
     display: flex;
     align-items: center;
@@ -148,6 +153,7 @@ h6 {
     max-height: 80px;
     padding: 5px;
     height: 70px;
+    width: 1807px;
 
 
 }
@@ -188,10 +194,11 @@ h6 {
     align-items: center;
     cursor: pointer;
     list-style: none;
-    gap: 50px;
+    gap: 20px;
     font-size: 1.5rem;
     margin-bottom: 0px;
     height: auto;
+    margin-right: 50px;
 
 }
 

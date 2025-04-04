@@ -5,34 +5,38 @@ const formLogin = document.getElementById("formLogin");
 const email = document.getElementById("usrname");
 const password = document.getElementById("psw");
 
-formLogin.addEventListener("submit", async function (event) {
-    event.preventDefault();
+if (formLogin) {
+    formLogin.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
 
-    if (emailValue === "" || passwordValue === "") {
-        alert("Por favor, preencha os campos de email e senha.");
-        return;
-    }
+        if (emailValue === "" || passwordValue === "") {
+            alert("Por favor, preencha os campos de email e senha.");
+            return;
+        }
 
-    const loginData = {
-        email: emailValue,
-        password: passwordValue
-    };
+        const loginData = {
+            email: emailValue,
+            password: passwordValue
+        };
 
-    const response = await apiLogin.loginPost(loginData)
-    console.log(response)
-    const user = response.user;
-    console.log(user)
-    const token = response.token;
+        const response = await apiLogin.loginPost(loginData)
+        console.log(response)
+        const user = response.user;
+        console.log(user)
+        const token = response.token;
 
-    if (token) {
-        JSON.stringify(localStorage.setItem("token", token));
-    }
+        if (token) {
+            JSON.stringify(localStorage.setItem("token", token));
+        }
 
-    updateUi(user);
-});
+        updateUi(user);
+    });
+}
+
+
 
 export function updateUi(user) {
     const divBtnLogin = document.querySelector(".app__header__menu__content__login")
@@ -71,10 +75,11 @@ export function updateUi(user) {
 }
 
 
-export function getUserDataFromToken(token) {
+export async function getUserDataFromToken(token) {
 
-    const user = apiLogin.loginToken(token);
+    const user = await apiLogin.loginToken(token);
     if (user) {
+        console.log(user)
         return user;
     } else {
         alert("Erro ao obter dados do usuário.");
