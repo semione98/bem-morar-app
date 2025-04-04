@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/src/styles/categories.css">
     <link rel="stylesheet" href="/src/styles/cards-home.css">
     <link rel="stylesheet" href="/src/styles/footer.css">
+    <link rel="stylesheet" href="/src/styles/header-anunciar.css">
+    <link rel="stylesheet" href="/src/styles/main-content-anunciar.css">
 
     <!-- links & styles modal login -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -79,9 +81,41 @@
 
     </header>
 
-    <main class="app">
+    <main class="app__anunciarImovel">
 
+        <div class="overlay"></div>
 
+        <div class="app__anunciarImovel__content">
+            <h1>Anunciar Imóvel</h1>
+            <form id="formAnunciarImovel" class="app__anunciarImovel__form">
+                <div class="app__anunciarImovel__form__group">
+                    <label for="titulo">Título do Anúncio:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                <div class="app__anunciarImovel__form__group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                </div>
+                <div class="app__anunciarImovel__form__group">
+                    <label for="preco">Preço:</label>
+                    <input type="number" id="preco" name="preco" required>
+                </div>
+                <div class="app__anunciarImovel__form__group">
+                    <label for="condominio">Preço do Condomínio:</label>
+                    <input type="number" id="condominio" name="condominio" required>
+                </div>
+                <div class="app__anunciarImovel__form__group">
+                    <label for="iptu">Valor do IPTU:</label>
+                    <input type="number" id="iptu" name="iptu" required>
+                </div>
+
+                <div class="app__anunciarImovel__form__group">
+                    <label for="localizacao">Localização:</label>
+                    <input type="text" id="localizacao" name="localizacao" required>
+                </div>
+                <button type="submit">Anunciar</button>
+            </form>
+        </div>
 
     </main>
 
