@@ -84,37 +84,87 @@
     <main class="app__anunciarImovel">
 
         <div class="overlay"></div>
+        <h1>Anunciar Imóvel</h1>
 
-        <div class="app__anunciarImovel__content">
-            <h1>Anunciar Imóvel</h1>
-            <form id="formAnunciarImovel" class="app__anunciarImovel__form">
-                <div class="app__anunciarImovel__form__group">
-                    <label for="titulo">Título do Anúncio:</label>
-                    <input type="text" id="titulo" name="titulo" required>
-                </div>
-                <div class="app__anunciarImovel__form__group">
-                    <label for="descricao">Descrição:</label>
-                    <textarea id="descricao" name="descricao" required></textarea>
-                </div>
-                <div class="app__anunciarImovel__form__group">
-                    <label for="preco">Preço:</label>
-                    <input type="number" id="preco" name="preco" required>
-                </div>
-                <div class="app__anunciarImovel__form__group">
-                    <label for="condominio">Preço do Condomínio:</label>
-                    <input type="number" id="condominio" name="condominio" required>
-                </div>
-                <div class="app__anunciarImovel__form__group">
-                    <label for="iptu">Valor do IPTU:</label>
-                    <input type="number" id="iptu" name="iptu" required>
+        <div class="app__anunciarImovel__content__form">
+
+            <div class="app__anunciarImovel__content">
+
+
+                <div class="upload__images__container">
+
+                    <div class="upload__images__container__content">
+
+                        <div class="upload__images__container__image">
+                            <img src="/assets/imagens/upload-image.jpg" alt="">
+                        </div>
+                        <div class="upload__images__container__image">
+                            <img src="/assets/imagens/upload-image.jpg" alt="">
+                        </div>
+                        <div class="upload__images__container__image">
+                            <img src="/assets/imagens/upload-image.jpg" alt="">
+                        </div>
+                        <div class="upload__images__container__image">
+                            <img src="/assets/imagens/upload-image.jpg" alt="">
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="upload__images__container__buttons">
+
+                        <div class="upload__images__container__button__upload">
+                            <button>
+                                <input type="file" id="image-upload" accept="image/" style="display: none" />
+                                <span>Selenar Imagens</span>
+                                <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.761719 13.5117V12H11.2383V13.5117H0.761719ZM0.761719 5.98828L6 0.75L11.2383 5.98828H8.25V10.4883H3.75V5.98828H0.761719Z"
+                                        fill="#888888" />
+                                </svg>
+
+                            </button>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div class="app__anunciarImovel__form__group">
-                    <label for="localizacao">Localização:</label>
-                    <input type="text" id="localizacao" name="localizacao" required>
-                </div>
-                <button type="submit">Anunciar</button>
-            </form>
+
+                <form id="formAnunciarImovel" class="app__anunciarImovel__form">
+                    <div class="app__anunciarImovel__form__group">
+                        <label for="titulo">Título do Anúncio:</label>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+                    <div class="app__anunciarImovel__form__group">
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" name="descricao" required></textarea>
+                    </div>
+                    <div class="app__anunciarImovel__form__group">
+                        <label for="preco">Preço:</label>
+                        <input type="number" id="preco" name="preco" required>
+                    </div>
+                    <div class="app__anunciarImovel__form__group">
+                        <label for="condominio">Preço do Condomínio:</label>
+                        <input type="number" id="condominio" name="condominio" required>
+                    </div>
+                    <div class="app__anunciarImovel__form__group">
+                        <label for="iptu">Valor do IPTU:</label>
+                        <input type="number" id="iptu" name="iptu" required>
+                    </div>
+
+                    <div class="app__anunciarImovel__form__group">
+                        <label for="localizacao">Localização:</label>
+                        <input type="text" id="localizacao" name="localizacao" required>
+                    </div>
+                    <button type="submit">Anunciar</button>
+                </form>
+
+            </div>
+
         </div>
 
     </main>
