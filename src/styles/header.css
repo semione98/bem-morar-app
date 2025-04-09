@@ -263,3 +263,33 @@ a {
 .app__header__menu__content__login__button.header__button__entrar {
     background-color: #f7f8e6;
 }
+
+
+
+.hover__effects__texts {
+    position: relative;
+    cursor: pointer;
+}
+
+.hover__effects__texts:hover {
+    color: var(--color-primary);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover__effects__texts::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover__effects__texts:hover::after {
+    transform: scaleX(1);
+}

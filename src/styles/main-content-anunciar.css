@@ -2,10 +2,11 @@
     backdrop-filter: blur(6px) brightness(0.8);
     display: flex;
     width: 100vw;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    padding: 30px;
 }
 
 .overlay {
@@ -88,7 +89,8 @@ textarea {
 
 }
 
-.upload__images__container {}
+/* .upload__images__container {} */
+
 
 .upload__images__container__image {
     width: 100%;
@@ -111,4 +113,55 @@ textarea {
     max-height: 50px;
     flex-direction: row;
     margin-top: 10px;
+}
+
+
+aside {
+    display: flex;
+    width: 350px;
+    height: 400px;
+    align-items: center;
+    max-height: 600px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 16px;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.35);
+    padding-top: 10px;
+}
+
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+aside ul li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 4px;
+    padding: 4px;
+    flex-direction: column;
+}
+
+aside ul li a {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+aside ul li img {
+    width: 20px;
+    height: 20px;
+
+}
+
+aside ul li span {
+    font-size: 16px;
+    font-weight: 600;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
