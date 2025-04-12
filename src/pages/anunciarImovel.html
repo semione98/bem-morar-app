@@ -154,7 +154,43 @@
                 </div>
 
                 <div class="separador"></div>
+
                 <form id="formAnunciarImovel" class="app__anunciarImovel__form">
+
+                    <div class="app__anunciarImovel__form__group">
+                        <label for="tipo_imovel">Tipo de Imóvel:</label>
+                        <div class="tipo-imovel-options">
+                            <label>
+                                <input type="radio" name="tipo_imovel" value="casa">
+                                <span>Casa</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo_imovel" value="apartamento">
+                                <span>Apartamento</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo_imovel" value="terreno">
+                                <span>Terreno</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="app__anunciarImovel__form__group">
+                        <label for="tipo_anuncio">Tipo de Anúncio:</label>
+                        <div class="tipo-imovel-options">
+                            <label>
+                                <input type="checkbox" name="tipo_imovel" value="venda">
+                                <span>Venda</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="tipo_imovel" value="aluguel">
+                                <span>Aluguel</span>
+                            </label>
+
+                        </div>
+                    </div>
+
                     <div class="app__anunciarImovel__form__group">
                         <label for="titulo">Título do Anúncio:</label>
                         <input type="text" id="titulo" name="titulo" required>

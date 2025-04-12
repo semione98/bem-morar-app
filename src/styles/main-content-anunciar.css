@@ -60,6 +60,46 @@
     padding: 10px;
 }
 
+.tipo-imovel-options {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.tipo-imovel-options label {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    flex-direction: row;
+    gap: 10px;
+}
+
+.tipo-imovel-options label span {
+    font-size: 15px;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+
+.tipo-imovel-options label input[type="radio"] {
+    align-self: flex-start;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.tipo-imovel-options label input[type="checkbox"] {
+    align-self: flex-start;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
 textarea {
     height: 100px !important;
     width: 600px;
