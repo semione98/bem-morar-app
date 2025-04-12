@@ -1,0 +1,21 @@
+:root {
+    --color-primary: #61c739;
+}
+
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html {
+    background: #fff;
+    min-height: 100vh;
+    font-size: 10px;
+    font-family: inherit !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}

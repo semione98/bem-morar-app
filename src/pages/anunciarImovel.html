@@ -11,12 +11,14 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="src/styles/global.css">
     <link rel="stylesheet" href="/src/styles/header.css">
     <link rel="stylesheet" href="/src/styles/categories.css">
     <link rel="stylesheet" href="/src/styles/cards-home.css">
     <link rel="stylesheet" href="/src/styles/footer.css">
     <link rel="stylesheet" href="/src/styles/header-anunciar.css">
     <link rel="stylesheet" href="/src/styles/main-content-anunciar.css">
+
 
     <!-- links & styles modal login -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -126,20 +128,17 @@
 
                         <div class="upload__images__container__image">
                             <img src="/assets/imagens/upload-image.jpg" alt="">
+                            <span>Clique aqui para adicionar uma imagem</span>
                         </div>
-
-
-
-
 
                     </div>
 
                     <div class="upload__images__container__buttons">
 
                         <div class="upload__images__container__button__upload">
-                            <button>
+                            <button class="button__upload__image">
                                 <input type="file" id="image-upload" accept="image/" style="display: none" />
-                                <span>Selenar Imagens</span>
+                                <span>Selecionar Imagens</span>
                                 <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -154,7 +153,7 @@
 
                 </div>
 
-
+                <div class="separador"></div>
                 <form id="formAnunciarImovel" class="app__anunciarImovel__form">
                     <div class="app__anunciarImovel__form__group">
                         <label for="titulo">Título do Anúncio:</label>
@@ -183,6 +182,7 @@
                     </div>
                     <button type="submit">Anunciar</button>
                 </form>
+
 
             </div>
 
