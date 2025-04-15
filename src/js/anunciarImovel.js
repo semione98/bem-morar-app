@@ -12,6 +12,8 @@ const divCondominio = document.getElementById('condominio').parentElement;
 const divIptu = document.getElementById('iptu').parentElement;
 
 let categoriaImovel = null;
+let tipoVenda = false;
+let tipoAluguel = false;
 
 radioTipoImovel.forEach(radio => {
     radio.addEventListener('change', () => {
@@ -31,15 +33,15 @@ radioTipoImovel.forEach(radio => {
 
 checkVenda.addEventListener('change', () => {
 
-
-
-
     if (checkVenda.checked) {
+        tipoVenda = true;
+
         divPrecoVenda.classList.remove('hidden');
         if (formAnunciarImovel.classList.contains('hidden')) {
             formAnunciarImovel.classList.remove('hidden');
         }
     } else {
+        tipoVenda = false;
         divPrecoVenda.classList.add('hidden');
         if (!formAnunciarImovel.classList.contains('hidden') && !checkAluguel.checked) {
             formAnunciarImovel.classList.add('hidden');
@@ -49,6 +51,7 @@ checkVenda.addEventListener('change', () => {
 
 checkAluguel.addEventListener('change', () => {
     if (checkAluguel.checked) {
+        tipoAluguel = true;
         divPrecoAluguel.classList.remove('hidden');
         divCondominio.classList.remove('hidden');
         divIptu.classList.remove('hidden');
@@ -57,6 +60,7 @@ checkAluguel.addEventListener('change', () => {
             formAnunciarImovel.classList.remove('hidden');
         }
     } else {
+        tipoAluguel = false;
         divPrecoAluguel.classList.add('hidden');
         divCondominio.classList.add('hidden');
         divIptu.classList.add('hidden');
@@ -77,4 +81,16 @@ formAnunciarImovel.addEventListener('submit', (e) => {
     const data = Object.fromEntries(formData);
 
     console.log(data);
+
+    const imovel = {
+        titulo: document.getElementById('titulo').value,
+        descricao: document.getElementById('descricao').value,
+        precoVenda: tipoVenda ? document.getElementById('precoVenda').value : null,
+        precoAluguel: tipoAluguel ? document.getElementById('precoAluguel').value : null,
+        condominio: tipoAluguel ? document.getElementById('condominio').value : null,
+        iptu: tipoAluguel ? document.getElementById('iptu').value : null,
+
+    }
+
+    console.log(imovel);
 });
