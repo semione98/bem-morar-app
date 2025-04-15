@@ -34,8 +34,22 @@ const apiAnunciarImovel = {
         } catch (error) {
             console.error('Erro ao listar imóveis:', error);
         }
-    }
+    },
 
+    async listarImoveisPorUsuario(token) {
+        try {
+            const response = await fetch(`${urlBase}/imoveisUser`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Erro ao listar imóveis por usuário:', error);
+        }
+    }
 
 }
 

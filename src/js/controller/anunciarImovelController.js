@@ -22,6 +22,27 @@ const anunciarImovelController = {
             console.error('Erro ao salvar imóvel:', error);
             return reply.status(500).send({ error: 'Erro ao salvar imóvel - anunciarImovelController.' });
         }
+    },
+
+    async listarImoveisController(request, reply) {
+        try {
+            const imoveis = await Imovel.listarImoveis();
+            return reply.status(200).send(imoveis);
+        } catch (error) {
+            console.error('Erro ao listar imóveis:', error);
+            return reply.status(500).send({ error: 'Erro ao listar imóveis - anunciarImovelController.' });
+        }
+    },
+
+    async listarImoveisPorUsuario(request, reply) {
+        try {
+            const user = request.user;
+            const imoveis = await Imovel.listarImoveisPorUsuario(user.id);
+            return reply.status(200).send(imoveis);
+        } catch (error) {
+            console.error('Erro ao listar imóveis por usuário:', error);
+            return reply.status(500).send({ error: 'Erro ao listar imóveis por usuário - anunciarImovelController.' });
+        }
     }
 
 }

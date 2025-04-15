@@ -25,6 +25,8 @@ app.post('/login/token', userController.getUserById)
 
 // Rotas de imóvel
 app.post('/anunciarImovel', { preHandler: authMiddleware }, anunciarImovelController.salvarImovel);
+app.get('/imoveis', anunciarImovelController.listarImoveisController);
+app.get('/imoveisUser', { preHandler: authMiddleware }, anunciarImovelController.listarImoveisPorUsuario);
 
 
 app.listen({
