@@ -19,6 +19,11 @@ const Imovel = {
 
         const result = await sql`INSERT INTO imoveis (titulo, descricao, precoVenda, precoAluguel, condominio, iptu, userId) VALUES (${imovelFormatado.titulo}, ${imovelFormatado.descricao}, ${imovelFormatado.precoVenda}, ${imovelFormatado.precoAluguel}, ${imovelFormatado.condominio}, ${imovelFormatado.iptu}, ${imovelFormatado.userId}) RETURNING *`;
         return result[0];
+    },
+
+    async listarImoveis() {
+        const result = await sql`SELECT * FROM imoveis`;
+        return result;
     }
 
 }
