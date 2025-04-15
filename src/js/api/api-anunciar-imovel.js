@@ -24,6 +24,16 @@ const apiAnunciarImovel = {
         } catch (error) {
             console.error('Erro ao anunciar imóvel:', error);
         }
+    },
+
+    async listarTodosImoveis() {
+        try {
+            const response = await fetch(`${urlBase}/imoveis`);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Erro ao listar imóveis:', error);
+        }
     }
 
 
