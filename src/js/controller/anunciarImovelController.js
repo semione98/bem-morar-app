@@ -12,9 +12,9 @@ const anunciarImovelController = {
             const imovel = request.body;
 
             imovel.userId = user.id;
-
+            console.log("console antes de mandar para o modelo");
             const imovelSalvo = await Imovel.salvarImovel(imovel);
-
+            console.log("console depois de mandar para o modelo");
             return reply.status(201).send(imovelSalvo);
 
 

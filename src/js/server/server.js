@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "@fastify/cors";
 import userController from "../controller/userController.js";
 import authMiddleware from "../middleware/authMiddleware.js";
+import anunciarImovelController from "../controller/anunciarImovelController.js";
 
 
 dotenv.config();
@@ -23,7 +24,7 @@ app.post('/login', userController.loginUser);
 app.post('/login/token', userController.getUserById)
 
 // Rotas de imóvel
-app.post('/anunciar-imovel', authMiddleware, anunciarImovelController.salvarImovel);
+app.post('/anunciarImovel', { preHandler: authMiddleware }, anunciarImovelController.salvarImovel);
 
 
 app.listen({

@@ -1,3 +1,5 @@
+import apiAnunciarImovel from './api/api-anunciar-imovel.js';
+
 const formAnunciarApartamento = document.getElementById('formAnunciarImovel');
 
 
@@ -74,7 +76,7 @@ checkAluguel.addEventListener('change', () => {
 
 
 
-formAnunciarImovel.addEventListener('submit', (e) => {
+formAnunciarImovel.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(formAnunciarImovel);
@@ -93,4 +95,7 @@ formAnunciarImovel.addEventListener('submit', (e) => {
     }
 
     console.log(imovel);
+
+    const imovelSalvo = await apiAnunciarImovel.anunciarImovel(imovel);
+    console.log(imovelSalvo);
 });

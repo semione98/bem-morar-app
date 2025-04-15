@@ -6,7 +6,7 @@ const apiAnunciarImovel = {
 
     async anunciarImovel(imovel) {
         try {
-            const response = await fetch(`${urlBase}/anunciar-imovel`, {
+            const response = await fetch(`${urlBase}/anunciarImovel`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
